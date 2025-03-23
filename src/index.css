@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    /* Light theme - Refined blue-slate professional palette */
+    --background: 210 45% 98%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    /* Main accent - Rich blue with good contrast */
+    --primary: 220 85% 30%; /* Deep blue */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 215 25% 93%;
+    --secondary-foreground: 220 85% 30%;
+
+    --muted: 215 25% 93%;
+    --muted-foreground: 220 20% 40%; /* Softer blue-gray for secondary text */
+
+    /* Signature accent color - Vibrant yet professional */
+    --accent: 210 100% 35%; /* Slightly brighter blue than primary */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 100% 35%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar with subtle distinction from main content */
+    --sidebar-background: 210 50% 98%;
+    --sidebar-foreground: 224 71% 4%;
+    --sidebar-primary: 220 85% 30%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 214 32% 95%;
+    --sidebar-accent-foreground: 224 71% 4%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 220 85% 30%;
+  }
+
+  .dark {
+    /* Dark theme - Refined deep slate with blue accents */
+    --background: 224 71% 4%; /* Deep blue-gray background */
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 220 85% 30%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%; /* Improved readability for secondary text */
+
+    /* Vibrant accent that pops against dark background */
+    --accent: 210 100% 79%; /* Bright blue that stands out in dark mode */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 210 100% 50%;
+
+    /* Sidebar with subtle depth against main background */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 220 85% 30%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 210 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+  
+  code, pre {
+    @apply font-mono;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg dark:bg-black/20 dark:border-white/10;
+  }
+  
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-white/40 shadow-md dark:bg-black/40 dark:border-white/10;
+  }
+  
+  .glass-dark {
+    @apply bg-foreground/5 backdrop-blur-md border border-foreground/10 shadow-md;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  /* Enhanced gradient for more visual appeal */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#1a5fb4] to-[#3584e4] dark:from-[#99c1f1] dark:to-[#62a0ea];
+  }
+  
+  .text-gradient-soft {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70;
+  }
+  
+  /* Refined highlight with slightly rounded corners */
+  .highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
+  
+  .highlight::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: hsla(var(--accent), 0.15);
+    border-radius: 3px;
+  }
+  
+  .scrollbar-slim {
+    scrollbar-width: thin;
+    scrollbar-color: hsla(var(--muted), 0.3) transparent;
+  }
+  
+  .scrollbar-slim::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .scrollbar-slim::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-slim::-webkit-scrollbar-thumb {
+    background-color: hsla(var(--muted), 0.3);
+    border-radius: 10px;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted)) transparent;
+}
+
+/* For Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--muted));
+  border-radius: 20px;
+}
+
+/* Enhanced card hover effects with subtle shadow */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.08), 0 4px 8px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Refined professional timeline styles */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, hsl(var(--accent)), transparent);
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 6px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: hsl(var(--accent));
+  box-shadow: 0 0 0 3px hsla(var(--accent), 0.1);
+}
+
+/* Enhanced code effect for software background */
+.code-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.code-effect::before {
+  content: '</>'; 
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  color: hsla(var(--accent), 0.05);
+  font-size: clamp(100px, 20vw, 300px);
+  right: -20px;
+  bottom: -60px;
+  line-height: 1;
+  z-index: -1;
+}

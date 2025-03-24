@@ -190,7 +190,7 @@ const Contact: React.FC = () => {
                 I'm currently available for freelance projects and full-time positions. Let's build something amazing together.
               </p>
               <a 
-                href="mailto:hello@example.com" 
+                href="mailto:pbhuvankambley2003@gmail.com" 
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white text-accent font-medium rounded-lg hover:bg-white/90 transition-colors group"
               >
                 <span>Let's Talk</span>

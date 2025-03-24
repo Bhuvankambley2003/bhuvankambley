@@ -138,12 +138,24 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               
-              <div className="mt-8 pt-6 border-t border-foreground/5">
+              <div className="mt-8 pt-6 border-t border-foreground/5 display-flex">
                 <p className="text-xs md:text-sm text-foreground/60 mb-4">Find me on social media</p>
                 <div className="flex gap-3">
+                  <a
+                    href="#"
+                    className="w-9 h-9 md:w-10 md:h-10 rounded-full invisible"
+                    aria-hidden="true"
+                  ></a>
+                  <a
+                    href="#"
+                    className="w-9 h-9 md:w-10 md:h-10 rounded-full invisible"
+                    aria-hidden="true"
+                  ></a>
+                  
+
                   <a 
                     href="https://github.com/Bhuvankambley2003" 
-                    className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-foreground/5 hover:bg-accent/10 hover:text-accent flex items-center justify-center transition-colors border border-foreground/10"
+                    className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-foreground/5 hover:bg-accent/10 hover:text-accent flex items-center  justify-center transition-colors border border-foreground/10"
                     aria-label="GitHub Profile"
                   >
                     <Github size={16} />

@@ -63,14 +63,14 @@ const Projects: React.FC = () => {
       image: "/invoice.png",
       githubUrl: "https://github.com/Bhuvankambley2003/invoice_management_system/tree/master"
     },
-    // {
-    //   id: 6,
-    //   title: "Event Management Application",
-    //   description: "Developed a full stack web application using Django and SQLite to manage events and registrations. Implemented CRUD operations to streamline event, attendee, and task management. Built RESTful API endpoints for integration and a responsive frontend, ensuring an intuitive user experience.",
-    //   tags: ["Django", "SQLite", "RestAPI", "Postman"],
-    //   // No image provided
-    //   githubUrl: "#"
-    // }
+    {
+      id: 6,
+      title: "Event Management Application",
+      description: "Developed a full stack web application using Django and SQLite to manage events and registrations. Implemented CRUD operations to streamline event, attendee, and task management. Built RESTful API endpoints for integration and a responsive frontend, ensuring an intuitive user experience.",
+      tags: ["Django", "SQLite", "RestAPI", "Postman","Docker"],
+      image:"/event.png",
+      githubUrl: "https://github.com/Bhuvankambley2003/event_management_application"
+    }
   ];
 
   // Handle ESC key to close project modal
@@ -113,16 +113,16 @@ const Projects: React.FC = () => {
       // Databases
       "PostgreSQL": "bg-blue-500/10 text-accent",
       "MySQL": "bg-blue-500/10 text-accent",
-      "SQLite": "bg-blue-500/10 text-blue-400",
+      "SQLite": "bg-blue-500/10 text-accent",
       "Firebase": "bg-blue-500/10 text-accent",
 
       // Tools & Infrastructure
       "Docker": "bg-blue-500/10 text-accent",
-      "RestAPI": "bg-red-500/10 text-red-500",
+      "RestAPI": "bg-blue-500/10 text-accent",
       "Postman": "bg-blue-500/10 text-accent",
       "FastAPI": "bg-blue-500/10 text-accent",
       "Streamlit": "bg-blue-500/10 text-accent",
-      "BeautifulSoup": "bg-teal-500/10 text-teal-500",
+      "BeautifulSoup": "bg-blue-500/10 text-accent",
     };
     
     return tagColorMap[tag] || "bg-foreground/10 text-foreground/70";
@@ -204,7 +204,7 @@ const Projects: React.FC = () => {
                     </p>
                     
                     {/* Tech Stack */}
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-2 mb-6 text-center justify-center">
                       {project.tags.map(tag => (
                         <span 
                           key={tag}
@@ -222,10 +222,10 @@ const Projects: React.FC = () => {
                     <div className="flex justify-between items-center">
                       <button
                         onClick={() => setSelectedProject(project)}
-                        className="bg-blue-500/10 text-accent hover:bg-blue-500/10 text-accent/80 font-medium text-sm flex items-center gap-1 px-3 py-1 rounded-full"
+                        className="bg-blue-500/10 text-accent hover:bg-blue-500/10 text-accent/80 font-medium text-sm flex items-center  px-1 py-1 rounded-full"
                       >
-                        View Details
-                        <ArrowUpRight size={16} />
+                        {/* View details */}
+                        {/* <ArrowUpRight size={16} /> */}
                       </button>
                       
                       <div className="flex gap-3">
@@ -234,7 +234,7 @@ const Projects: React.FC = () => {
                             href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-2 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-colors"
+                            className="p-2 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-colors flex items-center justify-center"
                             title="GitHub Repository"
                           >
                             <Github size={20} />
@@ -294,7 +294,7 @@ const Projects: React.FC = () => {
                   </p>
                   
                   {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-6 text-center justify-center">
                     {project.tags.map(tag => (
                       <span 
                         key={tag}
@@ -309,13 +309,14 @@ const Projects: React.FC = () => {
                   </div>
                   
                   {/* Action Buttons */}
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items">
                     <button
                       onClick={() => setSelectedProject(project)}
-                      className="bg-blue-500/10 text-accent hover:bg-blue-500/10 text-accent/80 font-medium text-sm flex items-center gap-1 rounded-full px-3 py-1"
+                      // place it below for details bg-blue-500/10 text-accent hover:bg-blue-500/10 text-accent/80 font-medium text-sm flex items-center  px-1 py-1 rounded-full
+                      className=""
                     >
-                      View Details
-                      <ArrowUpRight size={16} />
+                      {/* View Details */}
+                      {/* <ArrowUpRight size={16} /> */}
                     </button>
                     
                     <div className="flex gap-3">
@@ -324,10 +325,10 @@ const Projects: React.FC = () => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-colors"
+                          className="w-10 h-10 p-2 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-colors flex items-center justify-center"
                           title="GitHub Repository"
                         >
-                          <Github size={16} />
+                          <Github size={20} />
                         </a>
                       )}
                       {project.demoUrl && (
@@ -335,10 +336,10 @@ const Projects: React.FC = () => {
                           href={project.demoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="p-2 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-colors"
+                          className="w-10 h-10 p-2 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-colors flex items-center justify-center"
                           title="Live Demo"
                         >
-                          <Globe size={16} />
+                          <Globe size={20} />
                         </a>
                       )}
                     </div>

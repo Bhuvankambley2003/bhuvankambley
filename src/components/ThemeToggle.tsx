@@ -7,7 +7,7 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="flex items-center gap-2 p-2 rounded-lg bg-muted/50 dark:bg-muted/30">
+    <div className="flex items-center gap-2 p-2 rounded-lg bg-muted/0 dark:bg-muted/0">
       <Sun size={18} className={cn("transition-all", theme === "dark" ? "text-foreground/50" : "text-yellow-500")} />
       <Switch
         className="h-6 w-11 transition-all"

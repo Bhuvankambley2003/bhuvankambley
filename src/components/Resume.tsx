@@ -146,7 +146,7 @@ const Resume: React.FC = () => {
           <div className="md:w-1/5 lg:w-1/6">
             <div className="sticky top-24 mb-8 md:mb-0">
               <div className="relative">
-                <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-accent/20"></div>
+                <div className="absolute left-12 top-0 bottom-0 w-0.5 bg-accent/20"></div>
                 
                 {tabs.map((tab, index) => (
                   <div 
@@ -284,7 +284,7 @@ const Resume: React.FC = () => {
                           {/* Achievement Item */}
                           <div className="glass-dark rounded-xl p-6 card-hover">
                             <div className="flex gap-4">
-                              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items justify-center text-accent">
+                              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items justify-center items-center text-accent">
                                 <Trophy size={24} />
                               </div>
                               <div className="flex-1">

@@ -140,7 +140,7 @@ const ResumeTimeline: React.FC<ResumeTimelineProps> = ({ section = 'experience' 
       {section === 'education' && (
         <div className="space-y-8">
           <ResumeSection 
-            title="Education" 
+            title="" 
             subtitle="Academic background and formal training"
           >
             <TimelineItem
@@ -166,7 +166,7 @@ const ResumeTimeline: React.FC<ResumeTimelineProps> = ({ section = 'experience' 
       {section === 'certifications' && (
         <div className="space-y-1">
           <ResumeSection 
-            title="Certifications" 
+            title="" 
             subtitle="Professional certifications and specialized training"
           >
             <TimelineItem

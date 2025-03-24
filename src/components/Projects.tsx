@@ -25,7 +25,7 @@ const Projects: React.FC = () => {
       title: "Leveraging Pytorch to predict Blood Group Using fingerprint",
       description: "Developed a deep learning model using CNN in PyTorch to predict blood groups from fingerprint images with high accuracy. Designed and deployed a RESTful API backend for model inference and a Streamlit-based frontend for user interaction. Implemented Docker containerization for seamless deployment and scalability.",
       tags: ["Pytorch", "Streamlit", "FastAPI", "Docker"],
-      image: "src/components/screenshots/blood.png",
+      image: "/blood.png",
       githubUrl: "https://github.com/Bhuvankambley2003/Leveraging-PyTorch-CNN-for-Blood-Group-Prediction-using-Fingerprint-Images",
       
     },
@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
       title: "StockForge",
       description: "A professional-grade inventory management system for manufacturing enterprises. StockForge provides real-time control over multi-component production workflows, from raw material procurement to finished goods deployment. Features include automated stock reconciliation, BOM management, and enterprise-grade reporting.",
       tags: ["Django", "PostgreSQL", "HTML", "CSS", "Docker"],
-      image: "src/components/screenshots/dashboard.png",
+      image: "/dashboard.png",
       githubUrl: "https://github.com/Bhuvankambley2003/StockForge",
       featured: true
     },
@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
       title: "Sahaya",
       description: "Solution for Google GDSC 2024 addressing UN sustainable goals with features for education, poverty, and hunger, received positive feedback from over 20 people and Google. Implemented features to support sustainable cities, no poverty, quality education, and zero hunger. Integrated cloud services and authentication to enhance app capabilities.",
       tags: ["Flutter", "Firebase", "OpenAI API"],
-      image: "src/components/screenshots/sahaya.png",
+      image: "/sahaya.png",
       githubUrl: "https://github.com/Bhuvankambley2003/sahaya/tree/master",
       featured: false
     },
@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
       title: "Invoice Management System",
       description: "Developed a full stack web application using Django and MySQL to handle CRUD operations efficiently. Implemented CRUD operations to streamline invoice processing and database management. Built a responsive front-end with HTML and CSS, ensuring an intuitive user experience.",
       tags: ["Django", "MySQL", "HTML", "CSS", "Docker"],
-      image: "src/components/screenshots/invoice.png",
+      image: "/invoice.png",
       githubUrl: "https://github.com/Bhuvankambley2003/invoice_management_system/tree/master"
     },
     // {

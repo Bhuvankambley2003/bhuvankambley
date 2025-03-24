@@ -45,9 +45,9 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         </div>
       </div>
       
-      <p className="text-accent/90 font-medium mb-2">{subtitle}</p>
+      <p className="text-accent/90 font-medium mb-2 text-left">{subtitle}</p>
       <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-        <p className="text-foreground/70">{description}</p>
+        <p className="text-foreground/70 text-left">{description}</p>
         
         {credlyLink && (
           <Button 
@@ -91,7 +91,7 @@ const ResumeTimeline: React.FC<ResumeTimelineProps> = ({ section = 'experience' 
   // Choose title based on section
   const getTitle = () => {
     switch(section) {
-      case 'experience': return 'Work Experience';
+      case 'experience': return 'Experience';
       case 'education': return 'Education';
       case 'certifications': return 'Certifications';
       default: return 'Timeline';
@@ -106,7 +106,7 @@ const ResumeTimeline: React.FC<ResumeTimelineProps> = ({ section = 'experience' 
       {section === 'experience' && (
         <div className="space-y-8">
           <ResumeSection 
-            title="Work Experience" 
+            title="" 
             subtitle="My professional journey as a software developer"
           >
             <TimelineItem

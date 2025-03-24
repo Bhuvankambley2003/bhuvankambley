@@ -225,42 +225,42 @@ const Resume: React.FC = () => {
                         <h3 className="text-2xl font-display font-bold mb-6 text-gradient-soft">About Me</h3>
                         <div className="space-y-4 text-foreground/80">
                           <div className="flex flex-col lg:flex-row gap-8">
-                            <div className="lg:w-3/5 space-y-4">
-                              <p className="leading-relaxed">
+                            <div className="lg:w-3/5 space-y-6">
+                              <p className="leading-relaxed text-left">
                                 I'm a <span className="font-semibold text-foreground">passionate software developer</span> With a strong foundation in machine learning, cloud technologies & software development, I specialize in building intelligent systems that help solve business problems.
                               </p>
-                              <p className="leading-relaxed">
-                                I love <span className="font-semibold text-foreground">solving business problems</span>, with my creative and simulative mind. I believe in putting myself in the end user's position before proposing a solution
+                              <p className="leading-relaxed text-left">
+                                I love <span className="font-semibold text-foreground">solving business problems</span>, with my creative and simulative mind. I believe in putting myself in the end user's position before proposing a solution.
                               </p>
-                              <p className="leading-relaxed">
+                              <p className="leading-relaxed text-left">
                                 I thrive on <span className="font-semibold text-foreground">continuous learning and adaptability</span>, exploring new tools to stay ahead in the evolving IT landscape. Whether developing software, optimizing systems, or automating processes, I'm driven to build impactful solutions. Now seeking a full-time role to contribute, grow, and make a difference.
                               </p>
                             </div>
                             <div className="lg:w-2/5 glass-dark rounded-xl p-6">
-                              <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                              <h4 className="text-lg font-semibold mb-4 flex items-center gap-2 text-left">
                                 <User size={18} className="text-accent" />
                                 Professional Details
                               </h4>
                               <div className="space-y-4">
                                 <div className="grid grid-cols-3 gap-1 py-3 border-b border-foreground/5">
-                                  <div className="text-foreground/70">Name:</div>
-                                  <div className="col-span-2 font-medium">P Bhuvan Kambley</div>
+                                  <div className="text-foreground/70 text-left">Name:</div>
+                                  <div className="col-span-2 font-medium text-left">P Bhuvan Kambley</div>
                                 </div>
                                 <div className="grid grid-cols-3 gap-1 py-3 border-b border-foreground/5">
-                                  <div className="text-foreground/70">Location:</div>
-                                  <div className="col-span-2 font-medium">Bengaluru, India</div>
+                                  <div className="text-foreground/70 text-left">Location:</div>
+                                  <div className="col-span-2 font-medium text-left">Bengaluru, India</div>
                                 </div>
                                 <div className="grid grid-cols-3 gap-1 py-3 border-b border-foreground/5">
-                                  <div className="text-foreground/70">Experience:</div>
-                                  <div className="col-span-2 font-medium">Intern</div>
+                                  <div className="text-foreground/70 text-left">Experience:</div>
+                                  <div className="col-span-2 font-medium text-left">Intern</div>
                                 </div>
                                 <div className="grid grid-cols-3 gap-1 py-3 border-b border-foreground/5">
-                                  <div className="text-foreground/70">Availability:</div>
-                                  <div className="col-span-2 font-medium">Full-time</div>
+                                  <div className="text-foreground/70 text-left">Availability:</div>
+                                  <div className="col-span-2 font-medium text-left">Full-time</div>
                                 </div>
                                 <div className="grid grid-cols-3 gap-1 py-3">
-                                  <div className="text-foreground/70">Languages:</div>
-                                  <div className="col-span-2 font-medium">English, Hindi, Marathi, Kannada, Tamil </div>
+                                  <div className="text-foreground/70 text-left">Languages:</div>
+                                  <div className="col-span-2 font-medium text-left">English, Hindi, Marathi, Kannada, Tamil</div>
                                 </div>
                               </div>
                             </div>
@@ -279,12 +279,12 @@ const Resume: React.FC = () => {
                     
                     {tab.id === 'achievements' && (
                       <div className="animate-fade-in">
-                        <h3 className="text-2xl font-display font-bold mb-6 text-gradient-soft">Achievements & Awards</h3>
+                        <h3 className="text-2xl font-display font-bold mb-6 text-gradient-soft">Achievements </h3>
                         <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
                           {/* Achievement Item */}
                           <div className="glass-dark rounded-xl p-6 card-hover">
                             <div className="flex gap-4">
-                              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
+                              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent/10 flex items justify-center text-accent">
                                 <Trophy size={24} />
                               </div>
                               <div className="flex-1">

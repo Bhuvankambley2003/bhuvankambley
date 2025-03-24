@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
                   <div className="flex-shrink-0 w-10 h-10 md:w-11 md:h-11 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
                     <Mail size={18} />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 text-left">
                     <p className="text-xs md:text-sm text-foreground/60 mb-1">Email</p>
                     <a 
                       href="mailto:pbhuvankambley2003@gmail.com" 
@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 text-left">
                   <div className="flex-shrink-0 w-10 h-10 md:w-11 md:h-11 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
                     <Phone size={18} />
                   </div>
@@ -131,7 +131,7 @@ const Contact: React.FC = () => {
                   <div className="flex-shrink-0 w-10 h-10 md:w-11 md:h-11 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
                     <MapPin size={18} />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 text-left">
                     <p className="text-xs md:text-sm text-foreground/60 mb-1">Location</p>
                     <p className="text-sm md:text-lg text-foreground font-medium">Bengaluru, India</p>
                   </div>

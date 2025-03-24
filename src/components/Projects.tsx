@@ -269,7 +269,7 @@ const Projects: React.FC = () => {
             {projects.filter(p => !p.featured).map((project) => (
               <div 
                 key={project.id}
-                className="rounded-xl overflow-hidden border border-foreground/10 bg-foreground/[0.02] hover:shadow-lg transition-all duration-300 h-[530px] flex flex-col"
+                className="rounded-xl overflow-hidden border border-foreground/10 bg-foreground/[0.02] hover:shadow-lg transition-all duration-300 h-[580px] flex flex-col"
               >
                 {/* Project Image - Only render if image URL is provided */}
                 {project.image ? (
@@ -386,7 +386,7 @@ const Projects: React.FC = () => {
               <div className="p-6 overflow-y-auto max-h-[calc(85vh-15rem)]">
                 <h3 className="text-2xl font-bold mb-4">{selectedProject.title}</h3>
                 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-6 text-center justify-center">
                   {selectedProject.tags.map(tag => (
                     <span 
                       key={tag}
@@ -405,11 +405,11 @@ const Projects: React.FC = () => {
                 </p>
                 
                 <div className="border-t border-foreground/10 pt-4 mt-4">
-                  <h4 className="text-lg font-medium mb-2 flex items-center gap-2">
+                  <h4 className="text-lg font-medium mb-2 flex items-center gap-2 text-left">
                     <Code size={18} className="bg-blue-500/10 text-accent" />
                     Technical Details
                   </h4>
-                  <ul className="list-disc list-inside space-y-2 text-foreground/70 pl-2">
+                  <ul className="list-disc list-inside space-y-2 text-foreground/70 pl-2 text-left">
                     <li>Built with {selectedProject.tags.join(', ')}</li>
                     <li>Responsive design for all device sizes</li>
                     <li>Clean, maintainable code architecture</li>
